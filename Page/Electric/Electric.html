@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ВолгоРемСтрой | Электрика</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link type="Image/x-icon" href="../../Images/logo.png" rel="icon" />
+
+        <style>
+            @keyframes pulse {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.05);
+                }
+            }
+
+            body {
+                font-family: 'Montserrat', sans-serif;
+                scroll-behavior: smooth;
+                overflow-x: hidden;
+            }
+
+            .primary-color {
+                color: #cd5c5c;
+            }
+
+            .bg-primary {
+                background-color: #cd5c5c;
+            }
+
+            .hover-primary:hover {
+                color: #cd5c5c;
+            }
+
+            .hover-bg-primary:hover {
+                background-color: #cd5c5c;
+            }
+            .pulse-animation {
+                animation: pulse 3s infinite;
+            }
+            .gradient-text {
+                background: linear-gradient(90deg, #cd5c5c, #000);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+            .electric-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .electric-card {
+                transition: all 0.3s ease;
+            }
+            .spark {
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: #cd5c5c;
+                border-radius: 50%;
+                box-shadow: 0 0 10px 2px #cd5c5c;
+                animation: sparkle 1.5s infinite alternate;
+            }
+            @keyframes sparkle {
+                0% {
+                    opacity: 0.3;
+                    transform: scale(0.5);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-white font-sans">
+        <!-- Header -->
+        <nav
+            class="fixed w-full z-50 bg-white shadow-md transition-all duration-300"
+        >
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a
+                            href="../../Main.html"
+                            class="text-2xl font-bold primary-color"
+                            >ВолгоРемСтрой</a
+                        >
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a
+                            href="../../Main.html"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Главная</a
+                        >
+                        <a
+                            href="../../Main.html#services"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Услуги</a
+                        >
+                        <a
+                            href="../../Main.html#about"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >О нас</a
+                        >
+                        <a
+                            href="../../Main.html#portfolio"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Портфолио</a
+                        >
+                        <a
+                            href="../../Main.html#contact"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Контакты</a
+                        >
+                    </div>
+                    <div class="md:hidden">
+                        <button class="text-gray-800 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden">
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-black opacity-10"></div>
+                <div
+                    class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent"
+                ></div>
+                <div
+                    class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"
+                ></div>
+            </div>
+            <div class="container mx-auto px-6 py-24 relative z-10">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        <span class="gradient-text">Современные</span><br />
+                        <span class="text-black">электромонтажные работы</span>
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Профессиональный монтаж и обслуживание электрических
+                        систем от компании ВолгоРемСтрой. Безопасность,
+                        надежность и современные технологии — наш стандарт
+                        качества.
+                    </p>
+                </div>
+            </div>
+            <div class="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
+                <div class="relative h-full">
+                    <div
+                        class="absolute top-1/4 right-1/4 w-64 h-64 bg-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"
+                    ></div>
+                    <div
+                        class="absolute top-1/3 right-1/3 w-64 h-64 bg-black rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"
+                    ></div>
+                    <div
+                        class="absolute top-1/2 right-1/2 w-64 h-64 bg-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"
+                    ></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                        <h2
+                            class="text-3xl md:text-4xl font-bold mb-8 text-black"
+                        >
+                            <span class="border-b-4 border-red-600 pb-2"
+                                >Почему выбирают</span
+                            >
+                            нас?
+                        </h2>
+                        <p class="text-gray-700 mb-6 text-lg">
+                            ВолгоРемСтрой — это команда профессиональных
+                            электриков с многолетним опытом работы. Мы
+                            используем только качественные материалы и
+                            современное оборудование.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="flex items-center justify-center h-8 w-8 rounded-full bg-red-600 text-white"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-black">
+                                        Современные технологии
+                                    </h3>
+                                    <p class="mt-1 text-gray-600">
+                                        Используем только передовые методы
+                                        монтажа и диагностики электрических
+                                        систем.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="flex items-center justify-center h-8 w-8 rounded-full bg-red-600 text-white"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-black">
+                                        Гарантия качества
+                                    </h3>
+                                    <p class="mt-1 text-gray-600">
+                                        Все работы выполняются в строгом
+                                        соответствии с нормами и правилами
+                                        электробезопасности.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="flex items-center justify-center h-8 w-8 rounded-full bg-red-600 text-white"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-black">
+                                        Индивидуальный подход
+                                    </h3>
+                                    <p class="mt-1 text-gray-600">
+                                        Для каждого клиента разрабатываем
+                                        оптимальное решение с учетом
+                                        особенностей помещения.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div
+                            class="relative rounded-xl overflow-hidden shadow-2xl"
+                        >
+                            <img
+                                src="../../Images/Electric/Main.jpg"
+                                alt="Электрик за работой"
+                                class="w-full h-auto"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"
+                            ></div>
+                            <div
+                                class="absolute bottom-0 left-0 p-6 text-white"
+                            >
+                                <h3 class="text-xl font-bold mb-2">
+                                    Современные решения
+                                </h3>
+                                <p class="text-sm opacity-90">
+                                    Умные системы управления освещением и
+                                    энергопотреблением
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -bottom-8 -left-8 w-32 h-32 bg-red-600 rounded-full opacity-10 animate-pulse"
+                        ></div>
+                        <div
+                            class="absolute -top-8 -right-8 w-32 h-32 bg-black rounded-full opacity-10 animate-pulse animation-delay-2000"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">
+                        Наши <span class="text-red-600">услуги</span> по
+                        электрике
+                    </h2>
+                    <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+                    <p class="max-w-2xl mx-auto text-gray-700 text-lg">
+                        Полный спектр электромонтажных работ для квартир, домов
+                        и офисов. От проектирования до сдачи "под ключ".
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- Service 1 -->
+                    <div
+                        class="electric-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                    >
+                        <div class="relative h-48 overflow-hidden">
+                            <img
+                                src="../../Images/Electric/Electric.jpg"
+                                alt="Электромонтаж"
+                                class="w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-black opacity-30"
+                            ></div>
+                            <div class="absolute top-4 right-4"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 text-red-600"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-black">
+                                    Полный электромонтаж
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Комплексные работы по монтажу электрики в
+                                новостройках и при капитальном ремонте.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Разводка кабелей</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Установка щитков</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Монтаж розеток и выключателей</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="electric-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                    >
+                        <div class="relative h-48 overflow-hidden">
+                            <img
+                                src="../../Images/Electric/home.jpg"
+                                alt="Умный дом"
+                                class="w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-black opacity-30"
+                            ></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 text-red-600"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-black">
+                                    Системы "Умный дом"
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Современные решения для автоматизации управления
+                                освещением, климатом и безопасностью.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Управление освещением</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Контроль энергопотребления</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span
+                                        >Интеграция с голосовыми
+                                        помощниками</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="electric-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                    >
+                        <div class="relative h-48 overflow-hidden">
+                            <img
+                                src="../../Images/Electric/Diagnoz.jpg"
+                                alt="Ремонт и диагностика"
+                                class="w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-black opacity-30"
+                            ></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 text-red-600"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.494l-3.866 1.526a5 5 0 01-2.564 0l-3.866-1.526a6 6 0 00-3.86-.494l-2.387.477a2 2 0 00-1.022.547 2 2 0 00.461 3.076l1.83 1.218a6 6 0 003.639 1.27l1.185-.176a5 5 0 013.769 2.816l.461 1.127a2 2 0 001.853 1.27h2.155a2 2 0 001.853-1.27l.461-1.127a5 5 0 013.769-2.816l1.185.176a6 6 0 003.639-1.27l1.83-1.218a2 2 0 00.461-3.076zM12 15a3 3 0 100-6 3 3 0 000 6z"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-black">
+                                    Диагностика и ремонт
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Профессиональное выявление и устранение
+                                неисправностей в электрических сетях.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Поиск коротких замыканий</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Ремонт электропроводки</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5 text-red-600 mr-2"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span>Замена электрооборудования</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+                        Как мы работаем
+                    </h2>
+                    <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+                    <p class="text-gray-700 max-w-3xl mx-auto text-lg">
+                        Четкий алгоритм действий для обеспечения качества на
+                        каждом этапе
+                    </p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <!-- Шаг 1 -->
+                    <div class="process-step relative pl-16 pb-10">
+                        <div
+                            class="process-dot absolute left-0 top-0 w-12 h-12 rounded-full bg-red-600 flex items-center justify-center"
+                        >
+                            <span class="text-white font-bold text-xl">1</span>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-lg shadow-md hover-darken animate__animated animate__fadeInRight"
+                        >
+                            <h3 class="text-xl font-bold text-black mb-3">
+                                Консультация и замеры
+                            </h3>
+                            <p class="text-gray-700">
+                                Наш специалист приезжает на объект, проводит
+                                замеры и консультирует по всем вопросам. Мы
+                                изучаем ваши потребности и предлагаем
+                                оптимальные решения.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Шаг 2 -->
+                    <div class="process-step relative pl-16 pb-10">
+                        <div
+                            class="process-dot absolute left-0 top-0 w-12 h-12 rounded-full bg-black flex items-center justify-center"
+                        >
+                            <span class="text-white font-bold text-xl">2</span>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-lg shadow-md hover-darken animate__animated animate__fadeInRight"
+                            style="animation-delay: 0.2s"
+                        >
+                            <h3 class="text-xl font-bold text-black mb-3">
+                                Проектирование
+                            </h3>
+                            <p class="text-gray-700">
+                                Разрабатываем детальный проект электроснабжения
+                                с учетом всех нюансов: расположение розеток,
+                                выключателей, освещения, мощных потребителей.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Шаг 3 -->
+                    <div class="process-step relative pl-16 pb-10">
+                        <div
+                            class="process-dot absolute left-0 top-0 w-12 h-12 rounded-full bg-red-600 flex items-center justify-center"
+                        >
+                            <span class="text-white font-bold text-xl">3</span>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-lg shadow-md hover-darken animate__animated animate__fadeInRight"
+                            style="animation-delay: 0.4s"
+                        >
+                            <h3 class="text-xl font-bold text-black mb-3">
+                                Подбор материалов
+                            </h3>
+                            <p class="text-gray-700">
+                                Используем только проверенные материалы от
+                                надежных производителей. Подбираем оптимальное
+                                сочетание цены и качества.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Шаг 4 -->
+                    <div class="process-step relative pl-16 pb-10">
+                        <div
+                            class="process-dot absolute left-0 top-0 w-12 h-12 rounded-full bg-black flex items-center justify-center"
+                        >
+                            <span class="text-white font-bold text-xl">4</span>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-lg shadow-md hover-darken animate__animated animate__fadeInRight"
+                            style="animation-delay: 0.6s"
+                        >
+                            <h3 class="text-xl font-bold text-black mb-3">
+                                Монтажные работы
+                            </h3>
+                            <p class="text-gray-700">
+                                Наши мастера выполняют работы строго по проекту
+                                с соблюдением всех норм и правил. Используем
+                                профессиональный инструмент и оборудование.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Шаг 5 -->
+                    <div class="process-step relative pl-16">
+                        <div
+                            class="process-dot absolute left-0 top-0 w-12 h-12 rounded-full bg-red-600 flex items-center justify-center"
+                        >
+                            <span class="text-white font-bold text-xl">5</span>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-lg shadow-md hover-darken animate__animated animate__fadeInRight"
+                            style="animation-delay: 0.8s"
+                        >
+                            <h3 class="text-xl font-bold text-black mb-3">
+                                Тестирование и сдача
+                            </h3>
+                            <p class="text-gray-700">
+                                Проводим комплексные испытания системы,
+                                проверяем все соединения, автоматику и защитные
+                                устройства. Обучаем вас пользованию системой.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 relative">
+                        <div
+                            class="absolute -top-6 -left-6 w-32 h-32 bg-black rounded-full opacity-10 animate-pulse"
+                        ></div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2
+                            class="text-3xl md:text-4xl font-bold mb-8 text-black"
+                        >
+                            <span class="border-b-4 border-red-600 pb-2"
+                                >Современные</span
+                            >
+                            технологии
+                        </h2>
+                        <p class="text-gray-700 mb-6 text-lg">
+                            Мы используем передовое оборудование и материалы
+                            ведущих мировых производителей, чтобы обеспечить
+                            долговечность и безопасность электрических систем.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div
+                                class="bg-gray-50 p-6 rounded-lg border border-gray-200"
+                            >
+                                <div class="flex items-center mb-3">
+                                    <div
+                                        class="bg-red-600 text-white p-2 rounded-full mr-4"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-6 w-6"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-black">
+                                        Качественные материалы
+                                    </h3>
+                                </div>
+                                <p class="text-gray-600">
+                                    Используем только сертифицированные кабели,
+                                    розетки и электрооборудование.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-gray-50 p-6 rounded-lg border border-gray-200"
+                            >
+                                <div class="flex items-center mb-3">
+                                    <div
+                                        class="bg-red-600 text-white p-2 rounded-full mr-4"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-6 w-6"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-black">
+                                        Безопасность
+                                    </h3>
+                                </div>
+                                <p class="text-gray-600">
+                                    Все работы выполняются с соблюдением строгих
+                                    норм электробезопасности.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-gray-50 p-6 rounded-lg border border-gray-200"
+                            >
+                                <div class="flex items-center mb-3">
+                                    <div
+                                        class="bg-red-600 text-white p-2 rounded-full mr-4"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-6 w-6"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-black">
+                                        Оперативность
+                                    </h3>
+                                </div>
+                                <p class="text-gray-600">
+                                    Быстрое выполнение работ без потери качества
+                                    благодаря отработанным технологиям.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-gray-50 p-6 rounded-lg border border-gray-200"
+                            >
+                                <div class="flex items-center mb-3">
+                                    <div
+                                        class="bg-red-600 text-white p-2 rounded-full mr-4"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-6 w-6"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-black">
+                                        Энергоэффективность
+                                    </h3>
+                                </div>
+                                <p class="text-gray-600">
+                                    Внедряем решения, позволяющие снизить
+                                    энергопотребление без потери комфорта.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <div
+                    class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-10 hover-effect"
+                >
+                    <h2
+                        class="text-3xl font-bold text-dark mb-6 animate-fade-in"
+                    >
+                        Хотите такой же проект?
+                    </h2>
+                    <p class="text-gray-600 mb-8 animate-slide-up">
+                        Оставьте заявку и мы свяжемся с вами для обсуждения
+                        деталей вашего будущего дома или квартиры.
+                    </p>
+                    <a href="../../Main.html#contact">
+                        <button
+                            class="bg-primary hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+                        >
+                            Оставить заявку
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <a href="../../Main.html">
+                            <img
+                                src="../../Images/logo.png"
+                                alt="Логотип"
+                                class="w-28 h-28 rounded-lg"
+                            />
+                        </a>
+                        <p class="text-gray-400">
+                            Профессиональный ремонт и отделка под ключ в
+                            Волгограде. Качество, надежность, гарантия.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Услуги</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="../Key/Key.html"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Ремонт под ключ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Электрика</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../Bathroom/Bathroom.html"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Сантехника</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Компания</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="../../Main.html#about"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >О нас</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#portfolio"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Портфолио</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#services"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Услуги</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#contact"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-phone-alt primary-color mt-1 mr-3"
+                                ></i>
+                                <span class="text-gray-400"
+                                    >+7 (8442) 55-55-55</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-envelope primary-color mt-1 mr-3"
+                                ></i>
+                                <span class="text-gray-400"
+                                    >info@volgoremstroy.ru</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+                >
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        © 2023 ВолгоРемСтрой. Все права защищены.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Add sparks animation -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Create sparks
+                function createSparks() {
+                    const container = document.querySelector('body');
+                    const sparkCount = 20;
+
+                    for (let i = 0; i < sparkCount; i++) {
+                        const spark = document.createElement('div');
+                        spark.classList.add('spark');
+
+                        // Random position
+                        const posX = Math.random() * 100;
+                        const posY = Math.random() * 100;
+
+                        // Random size
+                        const size = Math.random() * 3 + 2;
+
+                        // Random animation delay
+                        const delay = Math.random() * 5;
+
+                        spark.style.left = `${posX}%`;
+                        spark.style.top = `${posY}%`;
+                        spark.style.width = `${size}px`;
+                        spark.style.height = `${size}px`;
+                        spark.style.animationDelay = `${delay}s`;
+
+                        container.appendChild(spark);
+                    }
+                }
+
+                createSparks();
+
+                // Animate elements on scroll
+                const animateOnScroll = function () {
+                    const elements = document.querySelectorAll(
+                        '.electric-card, .animate-on-scroll'
+                    );
+
+                    elements.forEach((element) => {
+                        const elementPosition =
+                            element.getBoundingClientRect().top;
+                        const windowHeight = window.innerHeight;
+
+                        if (elementPosition < windowHeight - 100) {
+                            element.classList.add(
+                                'animate__animated',
+                                'animate__fadeInUp'
+                            );
+                        }
+                    });
+                };
+
+                window.addEventListener('scroll', animateOnScroll);
+                animateOnScroll();
+            });
+        </script>
+    </body>
+</html>

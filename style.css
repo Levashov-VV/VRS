@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+        
+body {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.primary-color {
+    color: #CD5C5C;
+}
+
+.primary-bg {
+    background-color: #CD5C5C;
+}
+
+.hover-primary:hover {
+    color: #CD5C5C;
+}
+
+.hover-bg-primary:hover {
+    background-color: #CD5C5C;
+}
+
+.transition-all {
+    transition: all 0.5s ease;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.animate-slideInUp {
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.animate-slideInDown {
+    animation: slideInDown 0.8s ease forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Анимации при скролле */
+.scroll-animate {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.scroll-animate-left {
+    transform: translateX(-100px);
+}
+
+.scroll-animate-right {
+    transform: translateX(100px);
+}
+
+.scroll-animate-up {
+    transform: translateY(100px);
+}
+
+.scroll-animate-down {
+    transform: translateY(-100px);
+}
+
+.scroll-animate-active {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+}
+
+/* Параллакс эффект */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Кастомный чекбокс */
+.checkbox-custom {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 2px solid #CD5C5C;
+}
+
+.checkbox-custom:hover input ~ .checkmark {
+    background-color: #f1f1f1;
+}
+
+.checkbox-custom input:checked ~ .checkmark {
+    background-color: #CD5C5C;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-custom input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-custom .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Кастомный радио-баттон */
+.radio-custom {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radiomark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 2px solid #CD5C5C;
+    border-radius: 50%;
+}
+
+.radio-custom:hover input ~ .radiomark {
+    background-color: #f1f1f1;
+}
+
+.radio-custom input:checked ~ .radiomark {
+    background-color: #fff;
+}
+
+.radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-custom input:checked ~ .radiomark:after {
+    display: block;
+}
+
+.radio-custom .radiomark:after {
+    top: 5px;
+    left: 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #CD5C5C;
+}
