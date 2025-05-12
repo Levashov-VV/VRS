@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ВолгоРемСтрой | Ванные комнаты и сантехника</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link type="Image/x-icon" href="../../Images/logo.png" rel="icon" />
+
+        <style>
+            html,
+            body {
+                overflow-x: hidden;
+                max-width: 100%;
+            }
+
+            body {
+                font-family: 'Montserrat', sans-serif;
+                scroll-behavior: smooth;
+                overflow-x: hidden;
+            }
+
+            .primary-color {
+                color: #cd5c5c;
+            }
+
+            .bg-primary {
+                background-color: #cd5c5c;
+            }
+
+            .hover-primary:hover {
+                color: #cd5c5c;
+            }
+
+            .hover-bg-primary:hover {
+                background-color: #cd5c5c;
+            }
+
+            .transition-all {
+                transition: all 0.5s ease;
+            }
+
+            .parallax {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .fade-in {
+                animation: fadeIn 1.5s ease-in-out;
+            }
+
+            .slide-up {
+                animation: slideUp 1s ease-out;
+            }
+
+            .scale-in {
+                animation: scaleIn 1s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes scaleIn {
+                from {
+                    transform: scale(0.9);
+                    opacity: 0;
+                }
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+
+            .hover-scale:hover {
+                transform: scale(1.03);
+            }
+
+            .gradient-text {
+                background: linear-gradient(90deg, #cd5c5c, #8b0000);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .nav-link {
+                position: relative;
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: #cd5c5c;
+                transition: width 0.3s ease;
+            }
+
+            .nav-link:hover::after {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body class="bg-white text-black font-sans">
+        <!-- Header with Navigation -->
+        <nav
+            class="fixed w-full z-50 bg-white shadow-md transition-all duration-300"
+        >
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a
+                            href="../../Main.html"
+                            class="text-2xl font-bold primary-color"
+                            >ВолгоРемСтрой</a
+                        >
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a
+                            href="../../Main.html"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Главная</a
+                        >
+                        <a
+                            href="../../Main.html#services"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Услуги</a
+                        >
+                        <a
+                            href="../../Main.html#about"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >О нас</a
+                        >
+                        <a
+                            href="../../Main.html#portfolio"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Портфолио</a
+                        >
+                        <a
+                            href="../../Main.html#contact"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Контакты</a
+                        >
+                    </div>
+                    <div class="md:hidden">
+                        <button class="text-gray-800 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Parallax -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2
+                    class="text-3xl md:text-4xl font-bold text-center mb-16 slide-up"
+                >
+                    Наши <span class="gradient-text">услуги</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Service 1 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl shadow-lg hover-scale fade-in"
+                    >
+                        <div class="text-[#CD5C5C] text-4xl mb-4">
+                            <i class="fas fa-bath"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Комплексный ремонт
+                        </h3>
+                        <p class="text-gray-600">
+                            Полный цикл работ от демонтажа до финишной отделки.
+                            Гидроизоляция, укладка плитки, установка сантехники.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl shadow-lg hover-scale fade-in"
+                        style="animation-delay: 0.2s"
+                    >
+                        <div class="text-[#CD5C5C] text-4xl mb-4">
+                            <i class="fas fa-faucet"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Замена сантехники
+                        </h3>
+                        <p class="text-gray-600">
+                            Профессиональная установка ванн, душевых кабин,
+                            унитазов, раковин и смесителей с гарантией качества.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl shadow-lg hover-scale fade-in"
+                        style="animation-delay: 0.4s"
+                    >
+                        <div class="text-[#CD5C5C] text-4xl mb-4">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Разводка труб</h3>
+                        <p class="text-gray-600">
+                            Монтаж и замена водопроводных и канализационных труб
+                            с использованием современных материалов.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl shadow-lg hover-scale fade-in"
+                        style="animation-delay: 0.6s"
+                    >
+                        <div class="text-[#CD5C5C] text-4xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Электромонтаж</h3>
+                        <p class="text-gray-600">
+                            Безопасная разводка электрики в ванной комнате с
+                            учетом всех требований к влажным помещениям.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl shadow-lg hover-scale fade-in"
+                        style="animation-delay: 0.8s"
+                    >
+                        <div class="text-[#CD5C5C] text-4xl mb-4">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Дизайн-проект</h3>
+                        <p class="text-gray-600">
+                            Разработка индивидуального дизайна с 3D
+                            визуализацией и подбором материалов.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl shadow-lg hover-scale fade-in"
+                        style="animation-delay: 1s"
+                    >
+                        <div class="text-[#CD5C5C] text-4xl mb-4">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Аварийные работы</h3>
+                        <p class="text-gray-600">
+                            Срочное устранение протечек, засоров и других
+                            аварийных ситуаций круглосуточно.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section
+            class="parallax pt-40 pb-20 md:pt-20 md:pb-32 flex items-center justify-center"
+            style="
+                background-image: url('../../Images/Bathroom/Bathroom.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                min-height: 50vh;
+                width: 100vw;
+                margin: 0 auto;
+                opacity: 0.9;
+            "
+        >
+            <div class="container mx-auto px-6 text-center">
+                <div class="flex flex-col items-center justify-center h-100">
+                    <!-- Добавленный враппер -->
+                    <h1
+                        class="text-4xl md:text-6xl font-bold mb-6 text-white slide-up"
+                    >
+                        <span class="gradient-text"
+                            >Современные ванные комнаты</span
+                        ><br />
+                        от профессионалов
+                    </h1>
+                    <p
+                        class="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto fade-in"
+                    >
+                        Полный комплекс работ по ремонту и дизайну ванных комнат
+                        в Волгограде
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+
+        <!-- Process Section -->
+        <section id="process" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2
+                    class="text-3xl md:text-4xl font-bold text-center mb-16 slide-up"
+                >
+                    Как мы <span class="gradient-text">работаем</span>
+                </h2>
+
+                <div class="relative">
+                    <!-- Step 1 -->
+                    <div
+                        class="mb-16 flex flex-col md:flex-row items-center slide-up"
+                    >
+                        <div
+                            class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right"
+                        >
+                            <h3 class="text-2xl font-bold text-[#CD5C5C] mb-2">
+                                Консультация
+                            </h3>
+                            <p class="text-gray-600">
+                                Выезд специалиста, замеры и обсуждение ваших
+                                пожеланий
+                            </p>
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#CD5C5C] flex items-center justify-center text-white text-2xl font-bold shrink-0"
+                        >
+                            1
+                        </div>
+                        <div
+                            class="md:w-1/2 md:pl-16 mt-6 md:mt-0 md:text-left"
+                        >
+                            <!-- Empty on desktop, shows on mobile -->
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="mb-16 flex flex-col md:flex-row items-center slide-up"
+                        style="animation-delay: 0.2s"
+                    >
+                        <div
+                            class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right order-1 md:order-none"
+                        >
+                            <!-- Empty on desktop, shows on mobile -->
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#CD5C5C] flex items-center justify-center text-white text-2xl font-bold shrink-0 order-2"
+                        >
+                            2
+                        </div>
+                        <div
+                            class="md:w-1/2 md:pl-16 mt-6 md:mt-0 md:text-left order-3 md:order-none"
+                        >
+                            <h3 class="text-2xl font-bold text-[#CD5C5C] mb-2">
+                                Проектирование
+                            </h3>
+                            <p class="text-gray-600">
+                                Разработка дизайн-проекта с 3D визуализацией и
+                                сметой
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="mb-16 flex flex-col md:flex-row items-center slide-up"
+                        style="animation-delay: 0.4s"
+                    >
+                        <div
+                            class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right"
+                        >
+                            <h3 class="text-2xl font-bold text-[#CD5C5C] mb-2">
+                                Договор
+                            </h3>
+                            <p class="text-gray-600">
+                                Заключение договора с фиксированной сметой и
+                                сроками
+                            </p>
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#CD5C5C] flex items-center justify-center text-white text-2xl font-bold shrink-0"
+                        >
+                            3
+                        </div>
+                        <div
+                            class="md:w-1/2 md:pl-16 mt-6 md:mt-0 md:text-left"
+                        >
+                            <!-- Empty on desktop, shows on mobile -->
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                        class="mb-16 flex flex-col md:flex-row items-center slide-up"
+                        style="animation-delay: 0.6s"
+                    >
+                        <div
+                            class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right order-1 md:order-none"
+                        >
+                            <!-- Empty on desktop, shows on mobile -->
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#CD5C5C] flex items-center justify-center text-white text-2xl font-bold shrink-0 order-2"
+                        >
+                            4
+                        </div>
+                        <div
+                            class="md:w-1/2 md:pl-16 mt-6 md:mt-0 md:text-left order-3 md:order-none"
+                        >
+                            <h3 class="text-2xl font-bold text-[#CD5C5C] mb-2">
+                                Ремонт
+                            </h3>
+                            <p class="text-gray-600">
+                                Выполнение работ с соблюдением всех технологий и
+                                стандартов
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div
+                        class="flex flex-col md:flex-row items-center slide-up"
+                        style="animation-delay: 0.8s"
+                    >
+                        <div
+                            class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right"
+                        >
+                            <h3 class="text-2xl font-bold text-[#CD5C5C] mb-2">
+                                Сдача проекта
+                            </h3>
+                            <p class="text-gray-600">
+                                Приемка работ, подписание актов и предоставление
+                                гарантии
+                            </p>
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#CD5C5C] flex items-center justify-center text-white text-2xl font-bold shrink-0"
+                        >
+                            5
+                        </div>
+                        <div
+                            class="md:w-1/2 md:pl-16 mt-6 md:mt-0 md:text-left"
+                        >
+                            <!-- Empty on desktop, shows on mobile -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Призыв к действию -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <div
+                    class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-10 hover-effect"
+                >
+                    <h2
+                        class="text-3xl font-bold text-dark mb-6 animate-fade-in"
+                    >
+                        Хотите такой же проект?
+                    </h2>
+                    <p class="text-gray-600 mb-8 animate-slide-up">
+                        Оставьте заявку и мы свяжемся с вами для обсуждения
+                        деталей вашего будущего дома или квартиры.
+                    </p>
+                    <a href="../../Main.html#contact">
+                        <button
+                            class="bg-primary hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+                        >
+                            Оставить заявку
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <a href="../../Main.html">
+                            <img
+                                src="../../Images/logo.png"
+                                alt="Логотип"
+                                class="w-28 h-28 rounded-lg"
+                            />
+                        </a>
+                        <p class="text-gray-400">
+                            Профессиональный ремонт и отделка под ключ в
+                            Волгограде. Качество, надежность, гарантия.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Услуги</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="../Key/Key.html"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Ремонт под ключ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../Electric/Electric.html"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Электрика</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Сантехника</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Компания</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="../../Main.html#about"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >О нас</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#portfolio"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Портфолио</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#services"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Услуги</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#contact"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-phone-alt primary-color mt-1 mr-3"
+                                ></i>
+                                <span class="text-gray-400"
+                                    >+7 (8442) 55-55-55</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-envelope primary-color mt-1 mr-3"
+                                ></i>
+                                <span class="text-gray-400"
+                                    >info@volgoremstroy.ru</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+                >
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        © 2023 ВолгоРемСтрой. Все права защищены.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button
+            id="back-to-top"
+            class="fixed bottom-8 right-8 w-12 h-12 bg-[#CD5C5C] text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition duration-300"
+        >
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <script>
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                        });
+
+                        // Close mobile menu if open
+                        const mobileMenu =
+                            document.getElementById('mobile-menu');
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const animateElements = document.querySelectorAll(
+                '.slide-up, .fade-in, .scale-in'
+            );
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                }
+            );
+
+            animateElements.forEach((element) => {
+                observer.observe(element);
+            });
+
+            // Мобильное меню
+            const mobileMenuButton = document.querySelector(
+                '.md\\:hidden button'
+            );
+            const mobileMenu = document.querySelector(
+                '.md\\:hidden + .mobile-menu'
+            );
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function () {
+                    const menu = document.querySelector(
+                        '.md\\:hidden + .mobile-menu'
+                    );
+                    if (menu) {
+                        menu.classList.toggle('hidden');
+                    } else {
+                        // Создаем мобильное меню, если его нет
+                        const navLinks = document
+                            .querySelector('.md\\:flex')
+                            .cloneNode(true);
+                        navLinks.classList.remove('md:flex', 'space-x-8');
+                        navLinks.classList.add(
+                            'mobile-menu',
+                            'flex',
+                            'flex-col',
+                            'space-y-4',
+                            'mt-4',
+                            'md:hidden'
+                        );
+                        document
+                            .querySelector('.md\\:hidden')
+                            .parentNode.appendChild(navLinks);
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

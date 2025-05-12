@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ВолгоРемСтрой | Наши проекты</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link type="Image/x-icon" href="../../Images/logo.png" rel="icon" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#CD5C5C',
+                            dark: '#1a1a1a',
+                        },
+                        animation: {
+                            float: 'float 6s ease-in-out infinite',
+                            'fade-in': 'fadeIn 1s ease-in',
+                            'scale-in': 'scaleIn 0.5s ease-out',
+                            'slide-up': 'slideUp 0.8s ease-out',
+                        },
+                        keyframes: {
+                            float: {
+                                '0%, 100%': { transform: 'translateY(0)' },
+                                '50%': { transform: 'translateY(-20px)' },
+                            },
+                            fadeIn: {
+                                '0%': { opacity: '0' },
+                                '100%': { opacity: '1' },
+                            },
+                            scaleIn: {
+                                '0%': { transform: 'scale(0.8)', opacity: '0' },
+                                '100%': { transform: 'scale(1)', opacity: '1' },
+                            },
+                            slideUp: {
+                                '0%': {
+                                    transform: 'translateY(50px)',
+                                    opacity: '0',
+                                },
+                                '100%': {
+                                    transform: 'translateY(0)',
+                                    opacity: '1',
+                                },
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+            html,
+            body {
+                overflow-x: hidden;
+                max-width: 100%;
+            }
+
+            body {
+                font-family: 'Montserrat', sans-serif;
+                scroll-behavior: smooth;
+            }
+
+            .primary-color {
+                color: #cd5c5c;
+            }
+
+            .primary-bg {
+                background-color: #cd5c5c;
+            }
+
+            .hover-primary:hover {
+                color: #cd5c5c;
+            }
+
+            .hover-bg-primary:hover {
+                background-color: #cd5c5c;
+            }
+
+            .transition-all {
+                transition: all 0.5s ease;
+            }
+
+            .project-card:hover .project-image {
+                transform: scale(1.05);
+            }
+
+            .project-image {
+                transition: transform 0.5s ease;
+            }
+
+            .hover-effect {
+                transition: all 0.3s ease;
+            }
+
+            .hover-effect:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+
+            .gradient-text {
+                background: linear-gradient(90deg, #cd5c5c, #8b0000);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .pulse {
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(205, 92, 92, 0.7);
+                }
+                70% {
+                    box-shadow: 0 0 0 10px rgba(205, 92, 92, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(205, 92, 92, 0);
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-white">
+        <!-- Шапка -->
+        <nav
+            class="fixed w-full z-50 bg-white shadow-md transition-all duration-300"
+        >
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a
+                            href="../../Main.html"
+                            class="text-2xl font-bold primary-color"
+                            >ВолгоРемСтрой</a
+                        >
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a
+                            href="../../Main.html"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Главная</a
+                        >
+                        <a
+                            href="../../Main.html#services"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Услуги</a
+                        >
+                        <a
+                            href="../../Main.html#about"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >О нас</a
+                        >
+                        <a
+                            href="../../Main.html#portfolio"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Портфолио</a
+                        >
+                        <a
+                            href="../../Main.html#contact"
+                            class="text-gray-800 hover-primary font-medium transition-all"
+                            >Контакты</a
+                        >
+                    </div>
+                    <div class="md:hidden">
+                        <button class="text-gray-800 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Герой-секция -->
+        <section class="py-20 pb-10 bg-gradient-to-r from-white to-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+                    <span class="gradient-text">Наши проекты</span>
+                </h2>
+                <p
+                    class="text-lg text-gray-600 max-w-2xl mx-auto animate-slide-up"
+                >
+                    Дома и квартиры под ключ, выполненные с любовью и
+                    профессионализмом. Качество, которому можно доверять.
+                </p>
+            </div>
+        </section>
+
+        <!-- Проекты -->
+        <section class="py-0 bg-white">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- Проект 1 -->
+                    <div
+                        class="project-card rounded-xl overflow-hidden shadow-lg hover-effect animate-scale-in"
+                    >
+                        <div class="relative overflow-hidden h-64">
+                            <img
+                                src="../../Images/Key/Home.webp"
+                                alt="Современный дом под ключ"
+                                class="project-image w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                            ></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <span
+                                    class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+                                    >Дом под ключ</span
+                                >
+                                <h3 class="text-white text-xl font-bold mt-2">
+                                    Современный коттедж
+                                </h3>
+                                <p class="text-gray-200 text-sm">
+                                    Площадь: 120 м²
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проект 2 -->
+                    <div
+                        class="project-card rounded-xl overflow-hidden shadow-lg hover-effect animate-scale-in"
+                        style="animation-delay: 0.1s"
+                    >
+                        <div class="relative overflow-hidden h-64">
+                            <img
+                                src="../../Images/Key/2rooms.png"
+                                alt="Квартира под ключ"
+                                class="project-image w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                            ></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <span
+                                    class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+                                    >Квартира под ключ</span
+                                >
+                                <h3 class="text-white text-xl font-bold mt-2">
+                                    Стильная двушка
+                                </h3>
+                                <p class="text-gray-200 text-sm">
+                                    Площадь: 65 м²
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проект 3 -->
+                    <div
+                        class="project-card rounded-xl overflow-hidden shadow-lg hover-effect animate-scale-in"
+                        style="animation-delay: 0.2s"
+                    >
+                        <div class="relative overflow-hidden h-64">
+                            <img
+                                src="../../Images/Key/OutTown.png"
+                                alt="Загородный дом"
+                                class="project-image w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                            ></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <span
+                                    class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+                                    >Дом под ключ</span
+                                >
+                                <h3 class="text-white text-xl font-bold mt-2">
+                                    Загородный дом
+                                </h3>
+                                <p class="text-gray-200 text-sm">
+                                    Площадь: 90 м²
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проект 4 -->
+                    <div
+                        class="project-card rounded-xl overflow-hidden shadow-lg hover-effect animate-scale-in"
+                        style="animation-delay: 0.3s"
+                    >
+                        <div class="relative overflow-hidden h-64">
+                            <img
+                                src="../../Images/Key/Studio.webp"
+                                alt="Квартира в современном стиле"
+                                class="project-image w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                            ></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <span
+                                    class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+                                    >Квартира под ключ</span
+                                >
+                                <h3 class="text-white text-xl font-bold mt-2">
+                                    Современная студия
+                                </h3>
+                                <p class="text-gray-200 text-sm">
+                                    Площадь: 45 м²
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проект 5 -->
+                    <div
+                        class="project-card rounded-xl overflow-hidden shadow-lg hover-effect animate-scale-in"
+                        style="animation-delay: 0.4s"
+                    >
+                        <div class="relative overflow-hidden h-64">
+                            <img
+                                src="../../Images/Key/Classic.png"
+                                alt="Дом в классическом стиле"
+                                class="project-image w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                            ></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <span
+                                    class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+                                    >Дом под ключ</span
+                                >
+                                <h3 class="text-white text-xl font-bold mt-2">
+                                    Классический коттедж
+                                </h3>
+                                <p class="text-gray-200 text-sm">
+                                    Площадь: 150 м²
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проект 6 -->
+                    <div
+                        class="project-card rounded-xl overflow-hidden shadow-lg hover-effect animate-scale-in"
+                        style="animation-delay: 0.5s"
+                    >
+                        <div class="relative overflow-hidden h-64">
+                            <img
+                                src="../../Images/Key/Loft.png"
+                                alt="Квартира в лофт стиле"
+                                class="project-image w-full h-full object-cover"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                            ></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <span
+                                    class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+                                    >Квартира под ключ</span
+                                >
+                                <h3 class="text-white text-xl font-bold mt-2">
+                                    Лофт квартира
+                                </h3>
+                                <p class="text-gray-200 text-sm">
+                                    Площадь: 75 м²
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Призыв к действию -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <div
+                    class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-10 hover-effect"
+                >
+                    <h2
+                        class="text-3xl font-bold text-dark mb-6 animate-fade-in"
+                    >
+                        Хотите такой же проект?
+                    </h2>
+                    <p class="text-gray-600 mb-8 animate-slide-up">
+                        Оставьте заявку и мы свяжемся с вами для обсуждения
+                        деталей вашего будущего дома или квартиры.
+                    </p>
+                    <a href="../../Main.html#contact">
+                        <button
+                            class="bg-primary hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+                        >
+                            Оставить заявку
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подвал -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <a href="../../Main.html">
+                            <img
+                                src="../../Images/logo.png"
+                                alt="Логотип"
+                                class="w-28 h-28 rounded-lg"
+                            />
+                        </a>
+                        <p class="text-gray-400">
+                            Профессиональный ремонт и отделка под ключ в
+                            Волгограде. Качество, надежность, гарантия.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Услуги</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="./Key.html"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Ремонт под ключ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../Electric/Electric.html"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Электрика</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../Bathroom/Bathroom.html"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Сантехника</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Компания</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="../../Main.html#about"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >О нас</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#portfolio"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Портфолио</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#services"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Услуги</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../../Main.html#contact"
+                                    class="text-gray-400 hover-primary transition-all"
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-phone-alt primary-color mt-1 mr-3"
+                                ></i>
+                                <span class="text-gray-400"
+                                    >+7 (8442) 55-55-55</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-envelope primary-color mt-1 mr-3"
+                                ></i>
+                                <span class="text-gray-400"
+                                    >info@volgoremstroy.ru</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+                >
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        © 2023 ВолгоРемСтрой. Все права защищены.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-400 hover-primary transition-all"
+                        >
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Анимация при скролле
+            document.addEventListener('DOMContentLoaded', function () {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('animate-fade-in');
+                            }
+                        });
+                    },
+                    { threshold: 0.1 }
+                );
+
+                document
+                    .querySelectorAll('.animate-on-scroll')
+                    .forEach((el) => {
+                        observer.observe(el);
+                    });
+
+                // Плавный скролл для якорных ссылок
+                document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        document
+                            .querySelector(this.getAttribute('href'))
+                            .scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                    });
+                });
+            });
+
+            // Мобильное меню
+            const mobileMenuButton = document.querySelector(
+                '.md\\:hidden button'
+            );
+            const mobileMenu = document.querySelector(
+                '.md\\:hidden + .mobile-menu'
+            );
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function () {
+                    const menu = document.querySelector(
+                        '.md\\:hidden + .mobile-menu'
+                    );
+                    if (menu) {
+                        menu.classList.toggle('hidden');
+                    } else {
+                        // Создаем мобильное меню, если его нет
+                        const navLinks = document
+                            .querySelector('.md\\:flex')
+                            .cloneNode(true);
+                        navLinks.classList.remove('md:flex', 'space-x-8');
+                        navLinks.classList.add(
+                            'mobile-menu',
+                            'flex',
+                            'flex-col',
+                            'space-y-4',
+                            'mt-4',
+                            'md:hidden'
+                        );
+                        document
+                            .querySelector('.md\\:hidden')
+                            .parentNode.appendChild(navLinks);
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
